@@ -1,0 +1,150 @@
+import { Card } from "@/components/ui/card";
+import Icon from "@/components/ui/icon";
+
+export function ProblemSection() {
+  const problems = [
+    {
+      icon: "Clock",
+      title: "Рутина съедает время?",
+      solution: "Наши AI-ассистенты работают 24/7 без выходных."
+    },
+    {
+      icon: "DollarSign",
+      title: "Дорогой продакшн?",
+      solution: "Создаем видео и дизайн в 10 раз быстрее и дешевле студий."
+    },
+    {
+      icon: "Database",
+      title: "Хаос в данных?",
+      solution: "AI найдет инсайты там, где человек не увидит закономерности."
+    }
+  ];
+
+  return (
+    <section className="py-24 px-6">
+      <div className="container mx-auto max-w-6xl">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
+          Бизнес меняется. Либо вы используете AI, либо отстаете.
+        </h2>
+        <p className="text-xl text-muted-foreground text-center mb-16 max-w-3xl mx-auto">
+          Ваши конкуренты уже автоматизируют процессы с помощью нейросетей
+        </p>
+        
+        <div className="grid md:grid-cols-3 gap-8">
+          {problems.map((item, i) => (
+            <Card key={i} className="glass-card p-8 hover:glow-cyan transition-all duration-300">
+              <div className="mb-6 w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center">
+                <Icon name={item.icon} size={32} className="text-primary" />
+              </div>
+              <h3 className="text-xl font-bold mb-4">{item.title}</h3>
+              <p className="text-muted-foreground text-lg">{item.solution}</p>
+            </Card>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export function ServicesSection() {
+  const services = [
+    {
+      title: "AI-Маркетинг и Визуал",
+      icon: "Sparkles",
+      color: "primary",
+      items: [
+        "Создание AI-видео и Аватаров: Рекламные ролики, Цифровые двойники для рилс",
+        "Дизайн логотипов и Креативов: Уникальный брендинг",
+        "AI-Презентации: Продающие слайды 'под ключ' за считанные часы"
+      ]
+    },
+    {
+      title: "Автоматизация и Веб",
+      icon: "Bot",
+      color: "secondary",
+      items: [
+        "AI-Ассистенты и Чат-боты: Умные ИИ-сотрудники поддержки и продаж",
+        "Создание сайтов с AI: Генеративный дизайн и умный контент. Быстрый запуск"
+      ]
+    },
+    {
+      title: "Интеллект и Развитие",
+      icon: "Brain",
+      color: "accent",
+      items: [
+        "Глубокий анализ данных: Прогнозирование трендов, анализ конкурентов и отчетов",
+        "Корпоративное обучение: Учим ваши команды реально использовать AI"
+      ]
+    }
+  ];
+
+  return (
+    <section className="py-24 px-6 bg-muted/30">
+      <div className="container mx-auto max-w-6xl">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
+          Экосистема услуг
+        </h2>
+        
+        <div className="grid md:grid-cols-3 gap-8">
+          {services.map((service, i) => (
+            <Card key={i} className="glass-card p-8 hover:glow-violet transition-all duration-300">
+              <div className={`mb-6 w-16 h-16 rounded-full bg-${service.color}/20 flex items-center justify-center`}>
+                <Icon name={service.icon} size={32} className={`text-${service.color}`} />
+              </div>
+              <h3 className="text-2xl font-bold mb-6">{service.title}</h3>
+              <ul className="space-y-4">
+                {service.items.map((item, j) => (
+                  <li key={j} className="flex gap-3 text-muted-foreground">
+                    <Icon name="Check" size={20} className="text-primary flex-shrink-0 mt-1" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </Card>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export function ProcessSection() {
+  const steps = [
+    { icon: "Lightbulb", title: "Брифинг", description: "Понимаем задачи" },
+    { icon: "Search", title: "Анализ", description: "Подбираем стек нейросетей под ваш кейс" },
+    { icon: "Cpu", title: "Реализация", description: "Обучаем модели, генерируем, допиливаем" },
+    { icon: "Rocket", title: "Интеграция/Сдача", description: "Внедряем в ваши системы или отдаем готовые файлы" }
+  ];
+
+  return (
+    <section className="py-24 px-6">
+      <div className="container mx-auto max-w-6xl">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
+          Как мы работаем
+        </h2>
+        <p className="text-xl text-muted-foreground text-center mb-16">
+          Простой и понятный процесс от идеи до результата
+        </p>
+        
+        <div className="grid md:grid-cols-4 gap-6">
+          {steps.map((step, i) => (
+            <div key={i} className="relative">
+              <Card className="glass-card p-6 text-center h-full hover:scale-105 transition-transform">
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-xl font-bold">
+                  {i + 1}
+                </div>
+                <div className="mt-6 mb-4 flex justify-center">
+                  <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center">
+                    <Icon name={step.icon} size={28} className="text-primary" />
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold mb-2">{step.title}</h3>
+                <p className="text-muted-foreground">{step.description}</p>
+              </Card>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
