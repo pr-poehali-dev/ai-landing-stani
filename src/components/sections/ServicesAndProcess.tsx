@@ -79,8 +79,17 @@ export function ServicesSection() {
   ];
 
   return (
-    <section className="py-24 px-6 bg-muted/30">
-      <div className="container mx-auto max-w-6xl">
+    <section className="py-24 px-6 bg-muted/30 relative overflow-hidden">
+      <div 
+        className="absolute inset-0 opacity-20"
+        style={{
+          backgroundImage: 'url(https://cdn.poehali.dev/files/62bfc3ba-1492-4bc0-bff2-bbebefa1f740.png)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      />
+      <div className="container mx-auto max-w-6xl relative z-10">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
           Экосистема услуг
         </h2>
