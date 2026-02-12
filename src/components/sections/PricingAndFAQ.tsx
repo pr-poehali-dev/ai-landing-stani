@@ -6,24 +6,27 @@ import Icon from "@/components/ui/icon";
 export function PricingSection() {
   const plans = [
     {
-      name: "Start",
-      subtitle: "Контент",
-      price: "от 50 000 ₽",
-      features: ["Аватар", "5 креативов", "Лого"],
+      name: "Создание AI-видео",
+      subtitle: "Визуальный контент",
+      price: "от 3 000 ₽",
+      description: "за видео",
+      features: ["Рекламные ролики", "Мультяшные рилсы", "Цифровые аватары", "Зависит от длительности"],
       popular: false
     },
     {
-      name: "Business",
-      subtitle: "Автоматизация",
-      price: "от 150 000 ₽",
-      features: ["Чат-бот", "Сайт", "Видео-презентация"],
+      name: "AI-ВЕБ РАЗРАБОТКА",
+      subtitle: "Дизайн и Презентации",
+      price: "от 500 ₽",
+      description: "за слайд / от 1500₽ лого",
+      features: ["Топ-презентации под ключ", "Дизайн логотипов", "Креативы для соцсетей", "Быстрая разработка"],
       popular: true
     },
     {
-      name: "Enterprise",
-      subtitle: "Полное внедрение",
-      price: "от 500 000 ₽",
-      features: ["Анализ данных", "Обучение штата", "Кастомные AI-решения"],
+      name: "Бизнес-автоматизация",
+      subtitle: "Умные помощники",
+      price: "от 5 000 ₽",
+      description: "за проект",
+      features: ["Создание чат-ботов", "AI-ассистенты для продаж", "Автоматизация поддержки", "Интеграция с CRM"],
       popular: false
     }
   ];
@@ -52,6 +55,7 @@ export function PricingSection() {
                 <div className="text-4xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
                   {plan.price}
                 </div>
+                <p className="text-sm text-muted-foreground mt-2">{plan.description}</p>
               </div>
               <ul className="space-y-4 mb-8">
                 {plan.features.map((feature, j) => (
