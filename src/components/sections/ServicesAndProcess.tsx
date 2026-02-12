@@ -6,7 +6,7 @@ export function ProblemSection() {
     {
       icon: "Clock",
       title: "Рутина съедает время?",
-      solution: "Наши AI-ассистенты работают 24/7 без выходных."
+      solution: "Создадим AI-ассистентов работающих 24/7 без выходных"
     },
     {
       icon: "DollarSign",
@@ -15,8 +15,8 @@ export function ProblemSection() {
     },
     {
       icon: "Database",
-      title: "Хаос в данных?",
-      solution: "AI найдет инсайты там, где человек не увидит закономерности."
+      title: "Нужна глубокая аналитика?",
+      solution: "Наши нейронки сделают крутейший свод.анализ, просчёт или план"
     }
   ];
 
