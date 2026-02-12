@@ -53,9 +53,9 @@ export function ServicesSection() {
       icon: "Sparkles",
       color: "primary",
       items: [
-        "Создание AI-видео и Аватаров: Рекламные ролики, Цифровые двойники для рилс",
-        "Дизайн логотипов и Креативов: Уникальный брендинг",
-        "AI-Презентации: Продающие слайды 'под ключ' за считанные часы"
+        { text: "Создание AI-видео и Аватаров: Рекламные ролики, Цифровые двойники для рилс", icon: "Video" },
+        { text: "Дизайн логотипов и Креативов: Уникальный брендинг", icon: "Palette" },
+        { text: "AI-Презентации: Продающие слайды 'под ключ' за считанные часы", icon: "Presentation" }
       ]
     },
     {
@@ -63,8 +63,8 @@ export function ServicesSection() {
       icon: "Bot",
       color: "secondary",
       items: [
-        "AI-Ассистенты и Чат-боты: Умные ИИ-сотрудники поддержки и продаж",
-        "Создание сайтов с AI: Генеративный дизайн и умный контент. Быстрый запуск"
+        { text: "AI-Ассистенты и Чат-боты: Умные ИИ-сотрудники поддержки и продаж", icon: "MessageSquare" },
+        { text: "Создание сайтов с AI: Генеративный дизайн и умный контент. Быстрый запуск", icon: "Globe" }
       ]
     },
     {
@@ -72,8 +72,8 @@ export function ServicesSection() {
       icon: "Brain",
       color: "accent",
       items: [
-        "Глубокий анализ данных: Прогнозирование трендов, анализ конкурентов и отчетов",
-        "Корпоративное обучение: Учим ваши команды реально использовать AI"
+        { text: "Глубокий анализ данных: Прогнозирование трендов, анализ конкурентов и отчетов", icon: "BarChart3" },
+        { text: "Корпоративное обучение: Учим ваши команды реально использовать AI", icon: "GraduationCap" }
       ]
     }
   ];
@@ -104,8 +104,8 @@ export function ServicesSection() {
               <ul className="space-y-4">
                 {service.items.map((item, j) => (
                   <li key={j} className="flex gap-3 text-muted-foreground">
-                    <Icon name="Check" size={20} className="text-primary flex-shrink-0 mt-1" />
-                    <span>{item}</span>
+                    <Icon name={item.icon} size={20} className="text-cyan-400 flex-shrink-0 mt-1" />
+                    <span>{item.text}</span>
                   </li>
                 ))}
               </ul>
