@@ -82,10 +82,10 @@ export function HeroSection() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="text-lg px-8 py-6 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 glow-cyan shadow-2xl transition-all hover:scale-105">
-              Получить аудит бизнеса
+              Перечень услуг
             </Button>
             <Button size="lg" variant="outline" className="text-lg px-8 py-6 border-cyan-400/50 hover:bg-cyan-400/10 backdrop-blur-sm transition-all hover:scale-105">
-              Смотреть демо
+              Смотреть кейсы
             </Button>
           </div>
         </div>
