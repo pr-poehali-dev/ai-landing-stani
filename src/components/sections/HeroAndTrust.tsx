@@ -4,24 +4,26 @@ import Icon from "@/components/ui/icon";
 export function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-secondary/20 via-background to-primary/10" />
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: 'url(https://cdn.poehali.dev/files/b906551f-d798-4cc7-b45a-d3a84cd7eb19.png)' }}
+      />
       
-      <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-secondary/30 rounded-full blur-[120px] animate-float" />
-      <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-primary/30 rounded-full blur-[120px] animate-float" style={{ animationDelay: '3s' }} />
+      <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/60 to-background" />
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-5xl mx-auto text-center animate-fade-in">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent leading-tight">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent leading-tight drop-shadow-2xl">
             ИИ-студия, которая удваивает продажи бизнеса за счет нейросетей
           </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl text-white/90 mb-12 max-w-3xl mx-auto drop-shadow-lg">
             StaniStudio — студия нейросетей полного цикла. От генерации контента до автоматизации продаж и глубокой аналитики.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="text-lg px-8 py-6 bg-primary hover:bg-primary/90 glow-cyan">
+            <Button size="lg" className="text-lg px-8 py-6 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 glow-cyan shadow-2xl">
               Получить аудит бизнеса
             </Button>
-            <Button size="lg" variant="outline" className="text-lg px-8 py-6 border-white/20 hover:bg-white/10">
+            <Button size="lg" variant="outline" className="text-lg px-8 py-6 border-cyan-400/50 hover:bg-cyan-400/10 backdrop-blur-sm">
               Смотреть демо
             </Button>
           </div>
@@ -29,7 +31,7 @@ export function HeroSection() {
       </div>
       
       <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
-        <Icon name="ChevronDown" size={32} className="text-muted-foreground" />
+        <Icon name="ChevronDown" size={32} className="text-cyan-400/70" />
       </div>
     </section>
   );
