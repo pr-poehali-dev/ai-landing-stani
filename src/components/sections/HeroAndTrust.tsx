@@ -14,6 +14,61 @@ export function HeroSection() {
         <div className="absolute bottom-32 right-32 w-80 h-80 bg-purple-500/10 rounded-full blur-[120px]" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-cyan-400/5 rounded-full blur-[150px] animate-float" />
       </div>
+
+      <div className="absolute inset-0 grid-animation opacity-20" />
+
+      <div className="absolute inset-0 pointer-events-none">
+        {[...Array(30)].map((_, i) => (
+          <div
+            key={i}
+            className="particle absolute rounded-full bg-gradient-to-r from-cyan-400 to-purple-400"
+            style={{
+              width: `${Math.random() * 4 + 2}px`,
+              height: `${Math.random() * 4 + 2}px`,
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              animation: `particle-float ${Math.random() * 10 + 15}s linear infinite`,
+              animationDelay: `${Math.random() * 5}s`,
+              opacity: Math.random() * 0.5 + 0.3
+            }}
+          />
+        ))}
+      </div>
+
+      <svg className="absolute inset-0 w-full h-full opacity-10 pointer-events-none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="line-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#06b6d4" stopOpacity="0.8" />
+            <stop offset="100%" stopColor="#a855f7" stopOpacity="0.8" />
+          </linearGradient>
+        </defs>
+        {[...Array(6)].map((_, i) => (
+          <line
+            key={i}
+            x1="0"
+            y1={`${(i + 1) * 16.66}%`}
+            x2="100%"
+            y2={`${(i + 1) * 16.66}%`}
+            stroke="url(#line-gradient)"
+            strokeWidth="1"
+            className="animate-line-slide"
+            style={{ animationDelay: `${i * 0.5}s` }}
+          />
+        ))}
+        {[...Array(8)].map((_, i) => (
+          <line
+            key={`v-${i}`}
+            x1={`${(i + 1) * 12.5}%`}
+            y1="0"
+            x2={`${(i + 1) * 12.5}%`}
+            y2="100%"
+            stroke="url(#line-gradient)"
+            strokeWidth="1"
+            className="animate-line-slide"
+            style={{ animationDelay: `${i * 0.3}s` }}
+          />
+        ))}
+      </svg>
       
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0a0a1a]/50 to-[#0a0a1a]" />
       
