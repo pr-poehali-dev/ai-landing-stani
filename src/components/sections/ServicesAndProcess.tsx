@@ -26,11 +26,8 @@ export function ProblemSection() {
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
           Бизнес меняется. Либо вы используете AI, либо отстаете.
         </h2>
-        <p className="text-xl text-cyan-400 font-semibold text-center mb-2 max-w-3xl mx-auto">
+        <p className="text-xl text-cyan-400 font-semibold text-center mb-16 max-w-3xl mx-auto">
           9 и 10 лидеров рынка в РФ уже используют нейросети и ИИ-решения
-        </p>
-        <p className="text-xl text-muted-foreground text-center mb-16 max-w-3xl mx-auto">
-          Ваши конкуренты уже автоматизируют процессы с помощью нейросетей
         </p>
         
         <div className="grid md:grid-cols-3 gap-8">
