@@ -32,7 +32,7 @@ export function PricingSection() {
   ];
 
   return (
-    <section className="py-24 px-6 relative overflow-hidden">
+    <section id="pricing" className="py-24 px-6 relative overflow-hidden">
       <div className="absolute inset-0 grid-animation opacity-50" />
 
       <div className="absolute top-10 -left-20 w-[500px] h-[500px] bg-primary/25 rounded-full blur-[100px] animate-pulse-slow" />

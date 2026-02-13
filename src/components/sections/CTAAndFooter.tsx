@@ -5,7 +5,7 @@ import Icon from "@/components/ui/icon";
 
 export function CTASection() {
   return (
-    <section className="py-24 px-6 bg-gradient-to-br from-primary/20 via-secondary/20 to-background relative overflow-hidden">
+    <section id="contact" className="py-24 px-6 bg-gradient-to-br from-primary/20 via-secondary/20 to-background relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-secondary/10 animate-glow-pulse" />
       
       <div className="container mx-auto max-w-4xl relative z-10">
