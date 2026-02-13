@@ -137,13 +137,17 @@ export function ProcessSection() {
 
   return (
     <section className="py-24 px-6 relative overflow-hidden">
-      <div className="absolute inset-0 grid-animation opacity-20" />
-      <div className="absolute top-12 -right-20 w-[400px] h-[400px] bg-primary/15 rounded-full blur-[100px] animate-pulse-slow" />
-      <div className="absolute bottom-12 -left-20 w-[400px] h-[400px] bg-secondary/15 rounded-full blur-[100px] animate-pulse-slow" style={{ animationDelay: '4s' }} />
+      <div className="absolute inset-0 grid-animation opacity-35" />
+      <div className="absolute top-8 -right-16 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[100px] animate-pulse-slow" />
+      <div className="absolute bottom-8 -left-16 w-[500px] h-[500px] bg-secondary/20 rounded-full blur-[100px] animate-pulse-slow" style={{ animationDelay: '4s' }} />
+      <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-[350px] h-[350px] bg-secondary/10 rounded-full blur-[90px] animate-subtle-zoom" />
+      <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-[350px] h-[350px] bg-primary/10 rounded-full blur-[90px] animate-subtle-zoom" style={{ animationDelay: '10s' }} />
 
-      <svg className="absolute inset-0 w-full h-full opacity-15 pointer-events-none" xmlns="http://www.w3.org/2000/svg">
-        <line x1="20%" y1="0" x2="80%" y2="100%" stroke="hsl(189 95% 43%)" strokeWidth="0.6" className="animate-line-slide" />
-        <line x1="80%" y1="0" x2="20%" y2="100%" stroke="hsl(263 70% 60%)" strokeWidth="0.6" className="animate-line-slide" style={{ animationDelay: '4s' }} />
+      <svg className="absolute inset-0 w-full h-full opacity-25 pointer-events-none" xmlns="http://www.w3.org/2000/svg">
+        <line x1="10%" y1="0" x2="40%" y2="100%" stroke="hsl(189 95% 43%)" strokeWidth="0.8" className="animate-line-slide" />
+        <line x1="50%" y1="0" x2="80%" y2="100%" stroke="hsl(263 70% 60%)" strokeWidth="0.8" className="animate-line-slide" style={{ animationDelay: '2s' }} />
+        <line x1="85%" y1="0" x2="25%" y2="100%" stroke="hsl(189 95% 43%)" strokeWidth="0.6" className="animate-line-slide" style={{ animationDelay: '4s' }} />
+        <line x1="35%" y1="0" x2="65%" y2="100%" stroke="hsl(263 70% 60%)" strokeWidth="0.6" className="animate-line-slide" style={{ animationDelay: '6s' }} />
       </svg>
 
       <div className="container mx-auto max-w-6xl relative z-10">
