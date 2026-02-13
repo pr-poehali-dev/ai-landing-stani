@@ -137,22 +137,25 @@ export function ProcessSection() {
 
   return (
     <section className="py-24 px-6 relative overflow-hidden">
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-primary/8 rounded-full blur-[100px] animate-pulse-slow" />
+      <div className="absolute top-1/4 -left-20 w-[400px] h-[400px] bg-primary/15 rounded-full blur-[100px] animate-pulse-slow" />
+      <div className="absolute bottom-1/4 -right-20 w-[400px] h-[400px] bg-secondary/15 rounded-full blur-[100px] animate-pulse-slow" style={{ animationDelay: '4s' }} />
 
       <div className="absolute inset-0 pointer-events-none">
         {[
-          { x: '15%', y: '20%', size: 3, delay: 0, duration: 12 },
-          { x: '80%', y: '30%', size: 4, delay: 2, duration: 15 },
-          { x: '45%', y: '70%', size: 3, delay: 4, duration: 10 },
-          { x: '70%', y: '80%', size: 2, delay: 1, duration: 14 },
-          { x: '25%', y: '60%', size: 3, delay: 6, duration: 11 },
-          { x: '90%', y: '50%', size: 2, delay: 3, duration: 13 },
-          { x: '55%', y: '15%', size: 4, delay: 5, duration: 16 },
-          { x: '10%', y: '85%', size: 2, delay: 7, duration: 12 },
+          { x: '12%', y: '18%', size: 6, delay: 0, duration: 12, color: 'bg-cyan-400/60' },
+          { x: '82%', y: '25%', size: 8, delay: 2, duration: 15, color: 'bg-purple-400/50' },
+          { x: '42%', y: '72%', size: 5, delay: 4, duration: 10, color: 'bg-cyan-400/50' },
+          { x: '72%', y: '78%', size: 7, delay: 1, duration: 14, color: 'bg-purple-400/60' },
+          { x: '22%', y: '58%', size: 6, delay: 6, duration: 11, color: 'bg-cyan-400/40' },
+          { x: '88%', y: '52%', size: 5, delay: 3, duration: 13, color: 'bg-purple-400/50' },
+          { x: '55%', y: '12%', size: 8, delay: 5, duration: 16, color: 'bg-cyan-400/50' },
+          { x: '8%', y: '82%', size: 6, delay: 7, duration: 12, color: 'bg-purple-400/40' },
+          { x: '35%', y: '40%', size: 5, delay: 8, duration: 14, color: 'bg-cyan-400/50' },
+          { x: '65%', y: '45%', size: 7, delay: 3, duration: 11, color: 'bg-purple-400/60' },
         ].map((dot, i) => (
           <div
             key={i}
-            className="absolute rounded-full bg-primary/30"
+            className={`absolute rounded-full ${dot.color} blur-[1px]`}
             style={{
               left: dot.x,
               top: dot.y,
@@ -165,9 +168,9 @@ export function ProcessSection() {
         ))}
       </div>
 
-      <svg className="absolute inset-0 w-full h-full opacity-10 pointer-events-none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="50%" cy="50%" r="150" fill="none" stroke="hsl(189 95% 43%)" strokeWidth="0.5" strokeDasharray="4 8" style={{ animation: 'orbit 40s linear infinite' }} />
-        <circle cx="50%" cy="50%" r="250" fill="none" stroke="hsl(263 70% 60%)" strokeWidth="0.5" strokeDasharray="4 12" style={{ animation: 'orbit 60s linear infinite reverse' }} />
+      <svg className="absolute inset-0 w-full h-full opacity-25 pointer-events-none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50%" cy="50%" r="150" fill="none" stroke="hsl(189 95% 43%)" strokeWidth="1" strokeDasharray="6 10" style={{ animation: 'orbit 40s linear infinite' }} />
+        <circle cx="50%" cy="50%" r="280" fill="none" stroke="hsl(263 70% 60%)" strokeWidth="1" strokeDasharray="6 14" style={{ animation: 'orbit 55s linear infinite reverse' }} />
       </svg>
 
       <div className="container mx-auto max-w-6xl relative z-10">
