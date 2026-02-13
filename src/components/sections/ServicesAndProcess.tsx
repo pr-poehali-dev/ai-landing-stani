@@ -136,8 +136,17 @@ export function ProcessSection() {
   ];
 
   return (
-    <section className="py-24 px-6">
-      <div className="container mx-auto max-w-6xl">
+    <section className="py-24 px-6 relative overflow-hidden">
+      <div className="absolute inset-0 grid-animation opacity-20" />
+      <div className="absolute top-12 -right-20 w-[400px] h-[400px] bg-primary/15 rounded-full blur-[100px] animate-pulse-slow" />
+      <div className="absolute bottom-12 -left-20 w-[400px] h-[400px] bg-secondary/15 rounded-full blur-[100px] animate-pulse-slow" style={{ animationDelay: '4s' }} />
+
+      <svg className="absolute inset-0 w-full h-full opacity-15 pointer-events-none" xmlns="http://www.w3.org/2000/svg">
+        <line x1="20%" y1="0" x2="80%" y2="100%" stroke="hsl(189 95% 43%)" strokeWidth="0.6" className="animate-line-slide" />
+        <line x1="80%" y1="0" x2="20%" y2="100%" stroke="hsl(263 70% 60%)" strokeWidth="0.6" className="animate-line-slide" style={{ animationDelay: '4s' }} />
+      </svg>
+
+      <div className="container mx-auto max-w-6xl relative z-10">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
           Как мы работаем
         </h2>
