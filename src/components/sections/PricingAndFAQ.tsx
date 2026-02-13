@@ -32,22 +32,22 @@ export function PricingSection() {
   ];
 
   return (
-    <section id="pricing" className="py-24 px-6 relative overflow-hidden">
-      <div className="absolute inset-0 grid-animation opacity-50" />
+    <section id="pricing" className="py-24 pt-32 px-6 relative overflow-hidden">
+      <div className="absolute inset-0 -top-32 grid-animation opacity-40" />
 
-      <div className="absolute top-10 -left-20 w-[500px] h-[500px] bg-primary/25 rounded-full blur-[100px] animate-pulse-slow" />
-      <div className="absolute bottom-10 -right-20 w-[500px] h-[500px] bg-secondary/25 rounded-full blur-[100px] animate-pulse-slow" style={{ animationDelay: '4s' }} />
+      <div className="absolute -top-40 -right-20 w-[500px] h-[500px] bg-primary/25 rounded-full blur-[120px] animate-pulse-slow" style={{ animationDelay: '4s' }} />
+      <div className="absolute -top-32 -left-20 w-[500px] h-[500px] bg-secondary/25 rounded-full blur-[120px] animate-pulse-slow" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-primary/15 rounded-full blur-[80px] animate-subtle-zoom" />
-      <div className="absolute top-0 left-1/3 w-[400px] h-[400px] bg-secondary/20 rounded-full blur-[90px] animate-subtle-zoom" style={{ animationDelay: '10s' }} />
+      <div className="absolute bottom-10 left-1/3 w-[400px] h-[400px] bg-secondary/20 rounded-full blur-[90px] animate-subtle-zoom" style={{ animationDelay: '10s' }} />
       <div className="absolute bottom-0 right-1/3 w-[350px] h-[350px] bg-primary/20 rounded-full blur-[90px] animate-pulse-slow" style={{ animationDelay: '2s' }} />
 
-      <svg className="absolute inset-0 w-full h-full opacity-40 pointer-events-none" xmlns="http://www.w3.org/2000/svg">
-        <line x1="5%" y1="0" x2="35%" y2="100%" stroke="hsl(189 95% 43%)" strokeWidth="1" className="animate-line-slide" />
-        <line x1="25%" y1="0" x2="75%" y2="100%" stroke="hsl(263 70% 60%)" strokeWidth="0.8" className="animate-line-slide" style={{ animationDelay: '2s' }} />
-        <line x1="55%" y1="0" x2="85%" y2="100%" stroke="hsl(189 95% 43%)" strokeWidth="1" className="animate-line-slide" style={{ animationDelay: '4s' }} />
-        <line x1="75%" y1="0" x2="15%" y2="100%" stroke="hsl(263 70% 60%)" strokeWidth="0.8" className="animate-line-slide" style={{ animationDelay: '6s' }} />
-        <line x1="95%" y1="0" x2="50%" y2="100%" stroke="hsl(189 95% 43%)" strokeWidth="0.6" className="animate-line-slide" style={{ animationDelay: '1s' }} />
-        <line x1="45%" y1="0" x2="5%" y2="100%" stroke="hsl(263 70% 60%)" strokeWidth="0.6" className="animate-line-slide" style={{ animationDelay: '5s' }} />
+      <svg className="absolute -top-32 left-0 w-full h-[calc(100%+128px)] opacity-30 pointer-events-none" xmlns="http://www.w3.org/2000/svg">
+        <line x1="10%" y1="0" x2="40%" y2="100%" stroke="hsl(189 95% 43%)" strokeWidth="0.8" className="animate-line-slide" />
+        <line x1="50%" y1="0" x2="80%" y2="100%" stroke="hsl(263 70% 60%)" strokeWidth="0.8" className="animate-line-slide" style={{ animationDelay: '2s' }} />
+        <line x1="85%" y1="0" x2="25%" y2="100%" stroke="hsl(189 95% 43%)" strokeWidth="0.8" className="animate-line-slide" style={{ animationDelay: '4s' }} />
+        <line x1="35%" y1="0" x2="65%" y2="100%" stroke="hsl(263 70% 60%)" strokeWidth="0.6" className="animate-line-slide" style={{ animationDelay: '6s' }} />
+        <line x1="70%" y1="0" x2="10%" y2="100%" stroke="hsl(189 95% 43%)" strokeWidth="0.6" className="animate-line-slide" style={{ animationDelay: '1s' }} />
+        <line x1="30%" y1="0" x2="90%" y2="100%" stroke="hsl(263 70% 60%)" strokeWidth="0.6" className="animate-line-slide" style={{ animationDelay: '5s' }} />
       </svg>
 
       <div className="container mx-auto max-w-6xl relative z-10">
