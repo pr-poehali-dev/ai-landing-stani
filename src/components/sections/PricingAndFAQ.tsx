@@ -32,8 +32,13 @@ export function PricingSection() {
   ];
 
   return (
-    <section className="py-24 px-6 bg-muted/30">
-      <div className="container mx-auto max-w-6xl">
+    <section className="py-24 px-6 relative overflow-hidden">
+      <div 
+        className="absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: 'url(https://cdn.poehali.dev/files/a66b8135-21a4-4bbf-a9ee-f41e7e03142e.png)' }}
+      />
+      <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
+      <div className="container mx-auto max-w-6xl relative z-10">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
           Тарифы
         </h2>
