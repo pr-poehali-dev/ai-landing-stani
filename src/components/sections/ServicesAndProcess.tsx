@@ -86,7 +86,9 @@ export function ServicesSection() {
           backgroundImage: 'url(https://cdn.poehali.dev/files/62bfc3ba-1492-4bc0-bff2-bbebefa1f740.png)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
+          backgroundRepeat: 'no-repeat',
+          maskImage: 'radial-gradient(ellipse 80% 70% at center, black 40%, transparent 100%)',
+          WebkitMaskImage: 'radial-gradient(ellipse 80% 70% at center, black 40%, transparent 100%)',
         }}
       />
       <div className="absolute inset-0 grid-animation opacity-30" />
