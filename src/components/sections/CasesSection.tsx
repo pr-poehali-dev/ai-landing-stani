@@ -6,10 +6,10 @@ import Icon from "@/components/ui/icon";
 export function CasesSection() {
   const cases = [
     {
-      title: "Кейс StaniStudio - создание презентации для клуба КЛАН",
-      image: "https://cdn.poehali.dev/files/f34182d5-d5e2-4e50-a885-246b3ed6b1cb.png",
-      tags: ["15 слайдов", "Фирменный дизайн", "Маркетинговая структура"],
-      testimonial: "Сделали - огонь! инфографика на презе прям бомба!"
+      title: "Кейс StaniStudio - создание ряда рекламных видео для компании МикроМир",
+      image: "https://cdn.poehali.dev/files/193413dc-c66f-433c-9da4-4799707172d4.png",
+      tags: ["5 видео до 1 минуты", "Toyota Mark II, Toyota Supra, Porsche, КАМАЗ"],
+      testimonial: "Очень хорошо! То, что нужно! Пробуждает чувства ностальгии"
     },
     {
       title: "Кейс StaniStudio - создание видео с маскотами для дизайн-студии PERFECTUM",
@@ -18,10 +18,10 @@ export function CasesSection() {
       testimonial: "Оч классное видео, а анимация с текстом круто подчёркивает отличия каждого материала"
     },
     {
-      title: "Кейс StaniStudio - создание ряда рекламных видео для компании МикроМир",
-      image: "https://cdn.poehali.dev/files/193413dc-c66f-433c-9da4-4799707172d4.png",
-      tags: ["5 видео до 1 минуты", "Toyota Mark II, Toyota Supra, Porsche, КАМАЗ"],
-      testimonial: "Очень хорошо! То, что нужно! Пробуждает чувства ностальгии"
+      title: "Кейс StaniStudio - создание презентации для клуба КЛАН",
+      image: "https://cdn.poehali.dev/files/f34182d5-d5e2-4e50-a885-246b3ed6b1cb.png",
+      tags: ["15 слайдов", "Фирменный дизайн", "Маркетинговая структура"],
+      testimonial: "Сделали - огонь! инфографика на презе прям бомба!"
     },
     {
       title: "Кейс StaniStudio - создание оживлённых видео-показов товаров для магазина BUDUARR",
