@@ -33,11 +33,17 @@ export function PricingSection() {
 
   return (
     <section className="py-24 px-6 relative overflow-hidden">
-      <div 
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: 'url(https://cdn.poehali.dev/files/a66b8135-21a4-4bbf-a9ee-f41e7e03142e.png)' }}
-      />
-      <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
+      <div className="absolute inset-0 grid-animation opacity-30" />
+      <div className="absolute top-20 -left-32 w-96 h-96 bg-primary/10 rounded-full blur-[120px] animate-pulse-slow" />
+      <div className="absolute bottom-20 -right-32 w-96 h-96 bg-secondary/10 rounded-full blur-[120px] animate-pulse-slow" style={{ animationDelay: '4s' }} />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[100px] animate-subtle-zoom" />
+      
+      <svg className="absolute inset-0 w-full h-full opacity-20 pointer-events-none" xmlns="http://www.w3.org/2000/svg">
+        <line x1="10%" y1="0" x2="40%" y2="100%" stroke="hsl(189 95% 43%)" strokeWidth="0.5" className="animate-line-slide" />
+        <line x1="60%" y1="0" x2="90%" y2="100%" stroke="hsl(263 70% 60%)" strokeWidth="0.5" className="animate-line-slide" style={{ animationDelay: '3s' }} />
+        <line x1="80%" y1="0" x2="20%" y2="100%" stroke="hsl(189 95% 43%)" strokeWidth="0.5" className="animate-line-slide" style={{ animationDelay: '6s' }} />
+      </svg>
+
       <div className="container mx-auto max-w-6xl relative z-10">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
           Тарифы
