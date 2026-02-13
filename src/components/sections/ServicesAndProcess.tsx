@@ -137,13 +137,37 @@ export function ProcessSection() {
 
   return (
     <section className="py-24 px-6 relative overflow-hidden">
-      <div className="absolute inset-0 grid-animation opacity-15" />
-      <div className="absolute top-12 -right-20 w-[400px] h-[400px] bg-primary/10 rounded-full blur-[120px] animate-pulse-slow" />
-      <div className="absolute bottom-12 -left-20 w-[400px] h-[400px] bg-secondary/10 rounded-full blur-[120px] animate-pulse-slow" style={{ animationDelay: '4s' }} />
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-primary/8 rounded-full blur-[100px] animate-pulse-slow" />
 
-      <svg className="absolute inset-0 w-full h-full opacity-12 pointer-events-none" xmlns="http://www.w3.org/2000/svg">
-        <line x1="20%" y1="0" x2="80%" y2="100%" stroke="hsl(189 95% 43%)" strokeWidth="0.5" className="animate-line-slide" />
-        <line x1="80%" y1="0" x2="20%" y2="100%" stroke="hsl(263 70% 60%)" strokeWidth="0.5" className="animate-line-slide" style={{ animationDelay: '4s' }} />
+      <div className="absolute inset-0 pointer-events-none">
+        {[
+          { x: '15%', y: '20%', size: 3, delay: 0, duration: 12 },
+          { x: '80%', y: '30%', size: 4, delay: 2, duration: 15 },
+          { x: '45%', y: '70%', size: 3, delay: 4, duration: 10 },
+          { x: '70%', y: '80%', size: 2, delay: 1, duration: 14 },
+          { x: '25%', y: '60%', size: 3, delay: 6, duration: 11 },
+          { x: '90%', y: '50%', size: 2, delay: 3, duration: 13 },
+          { x: '55%', y: '15%', size: 4, delay: 5, duration: 16 },
+          { x: '10%', y: '85%', size: 2, delay: 7, duration: 12 },
+        ].map((dot, i) => (
+          <div
+            key={i}
+            className="absolute rounded-full bg-primary/30"
+            style={{
+              left: dot.x,
+              top: dot.y,
+              width: dot.size,
+              height: dot.size,
+              animation: `dot-drift ${dot.duration}s ease-in-out infinite`,
+              animationDelay: `${dot.delay}s`,
+            }}
+          />
+        ))}
+      </div>
+
+      <svg className="absolute inset-0 w-full h-full opacity-10 pointer-events-none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50%" cy="50%" r="150" fill="none" stroke="hsl(189 95% 43%)" strokeWidth="0.5" strokeDasharray="4 8" style={{ animation: 'orbit 40s linear infinite' }} />
+        <circle cx="50%" cy="50%" r="250" fill="none" stroke="hsl(263 70% 60%)" strokeWidth="0.5" strokeDasharray="4 12" style={{ animation: 'orbit 60s linear infinite reverse' }} />
       </svg>
 
       <div className="container mx-auto max-w-6xl relative z-10">
