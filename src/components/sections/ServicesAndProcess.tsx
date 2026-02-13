@@ -81,7 +81,7 @@ export function ServicesSection() {
   return (
     <section id="services" className="py-24 px-6 bg-muted/30 relative overflow-hidden">
       <div 
-        className="absolute inset-0 opacity-20 animate-subtle-zoom"
+        className="absolute -inset-10 opacity-25 animate-subtle-zoom"
         style={{
           backgroundImage: 'url(https://cdn.poehali.dev/files/62bfc3ba-1492-4bc0-bff2-bbebefa1f740.png)',
           backgroundSize: 'cover',
@@ -89,8 +89,16 @@ export function ServicesSection() {
           backgroundRepeat: 'no-repeat'
         }}
       />
-      <div className="absolute top-16 -left-24 w-[400px] h-[400px] bg-primary/15 rounded-full blur-[100px] animate-pulse-slow" />
-      <div className="absolute bottom-16 -right-24 w-[400px] h-[400px] bg-secondary/15 rounded-full blur-[100px] animate-pulse-slow" style={{ animationDelay: '4s' }} />
+      <div className="absolute inset-0 grid-animation opacity-30" />
+      <div className="absolute top-10 -left-16 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[100px] animate-pulse-slow" />
+      <div className="absolute bottom-10 -right-16 w-[500px] h-[500px] bg-secondary/20 rounded-full blur-[100px] animate-pulse-slow" style={{ animationDelay: '4s' }} />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/10 rounded-full blur-[80px] animate-subtle-zoom" style={{ animationDelay: '10s' }} />
+
+      <svg className="absolute inset-0 w-full h-full opacity-20 pointer-events-none" xmlns="http://www.w3.org/2000/svg">
+        <line x1="10%" y1="0" x2="50%" y2="100%" stroke="hsl(189 95% 43%)" strokeWidth="0.8" className="animate-line-slide" />
+        <line x1="70%" y1="0" x2="30%" y2="100%" stroke="hsl(263 70% 60%)" strokeWidth="0.8" className="animate-line-slide" style={{ animationDelay: '3s' }} />
+        <line x1="90%" y1="0" x2="60%" y2="100%" stroke="hsl(189 95% 43%)" strokeWidth="0.6" className="animate-line-slide" style={{ animationDelay: '6s' }} />
+      </svg>
       <div className="container mx-auto max-w-6xl relative z-10">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
           Экосистема услуг
