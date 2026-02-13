@@ -81,10 +81,10 @@ export function HeroSection() {
             StaniStudio — студия нейросетей полного цикла. От генерации контента до автоматизации продаж и глубокой аналитики.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="text-lg px-8 py-6 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 glow-cyan shadow-2xl transition-all hover:scale-105">
+            <Button size="lg" className="text-lg px-8 py-6 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 glow-cyan shadow-2xl transition-all hover:scale-105" onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}>
               Перечень услуг
             </Button>
-            <Button size="lg" variant="outline" className="text-lg px-8 py-6 border-cyan-400/50 hover:bg-cyan-400/10 backdrop-blur-sm transition-all hover:scale-105">
+            <Button size="lg" variant="outline" className="text-lg px-8 py-6 border-cyan-400/50 hover:bg-cyan-400/10 backdrop-blur-sm transition-all hover:scale-105" onClick={() => document.getElementById('cases')?.scrollIntoView({ behavior: 'smooth' })}>
               Смотреть кейсы
             </Button>
           </div>

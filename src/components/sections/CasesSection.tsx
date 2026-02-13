@@ -32,7 +32,7 @@ export function CasesSection() {
   ];
 
   return (
-    <section className="py-24 px-6 relative overflow-hidden">
+    <section id="cases" className="py-24 px-6 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background" />
       
       <div className="container mx-auto max-w-7xl relative z-10">
