@@ -81,7 +81,7 @@ export function ServicesSection() {
   return (
     <section id="services" className="py-24 px-6 bg-muted/30 relative overflow-hidden">
       <div 
-        className="absolute inset-0 opacity-20"
+        className="absolute inset-0 opacity-20 animate-subtle-zoom"
         style={{
           backgroundImage: 'url(https://cdn.poehali.dev/files/62bfc3ba-1492-4bc0-bff2-bbebefa1f740.png)',
           backgroundSize: 'cover',
@@ -89,6 +89,8 @@ export function ServicesSection() {
           backgroundRepeat: 'no-repeat'
         }}
       />
+      <div className="absolute top-16 -left-24 w-[400px] h-[400px] bg-primary/15 rounded-full blur-[100px] animate-pulse-slow" />
+      <div className="absolute bottom-16 -right-24 w-[400px] h-[400px] bg-secondary/15 rounded-full blur-[100px] animate-pulse-slow" style={{ animationDelay: '4s' }} />
       <div className="container mx-auto max-w-6xl relative z-10">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
           Экосистема услуг
