@@ -46,10 +46,14 @@ export function AboutSection() {
             </div>
           </div>
           <div className="flex justify-center mb-5">
-            <img
-              src="https://cdn.poehali.dev/files/47679a26-a497-4d72-9fa2-57697712ef56.jpg"
-              alt="StaniStudio"
-              className="h-14 md:h-16 object-contain brightness-0 invert"
+            <div
+              className="w-16 h-16 md:w-20 md:h-20 brightness-0 invert drop-shadow-lg"
+              style={{
+                backgroundImage: 'url(https://cdn.poehali.dev/files/1bf0063c-ca22-4cf4-ba3b-ac5c61809a56.jpg)',
+                backgroundSize: '550%',
+                backgroundPosition: '8% 42%',
+                backgroundRepeat: 'no-repeat',
+              }}
             />
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mt-3">
