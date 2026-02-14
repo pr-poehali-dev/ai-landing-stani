@@ -38,11 +38,22 @@ export function AboutSection() {
 
       <div className="container mx-auto max-w-6xl relative z-10">
         <div className="text-center mb-16">
-          <span className="text-primary font-semibold tracking-wider uppercase text-sm">
-            О студии
-          </span>
+          <div className="inline-block mb-6">
+            <div className="glass-card px-6 py-3 rounded-full border border-primary/30">
+              <span className="text-primary font-bold tracking-widest uppercase text-base md:text-lg">
+                О студии
+              </span>
+            </div>
+          </div>
+          <div className="flex justify-center mb-5">
+            <img
+              src="https://cdn.poehali.dev/files/47679a26-a497-4d72-9fa2-57697712ef56.jpg"
+              alt="StaniStudio"
+              className="h-14 md:h-16 object-contain brightness-0 invert"
+            />
+          </div>
           <h2 className="text-4xl md:text-5xl font-bold mt-3">
-            Человек за <span className="text-gradient">StaniStudio</span>
+            Создатель <span className="text-gradient">StaniStudio</span>
           </h2>
         </div>
 
