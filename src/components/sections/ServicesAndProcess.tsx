@@ -27,7 +27,7 @@ export function ProblemSection() {
           Бизнес меняется. Либо вы используете AI, либо отстаете.
         </h2>
         <p className="text-xl text-cyan-400 font-semibold text-center mb-16 max-w-3xl mx-auto">
-          9 и 10 лидеров рынка в РФ уже используют нейросети и ИИ-решения
+          9 из 10 лидеров рынка в РФ уже используют нейросети и ИИ-решения
         </p>
         
         <div className="grid md:grid-cols-3 gap-8">
