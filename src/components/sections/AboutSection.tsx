@@ -45,17 +45,6 @@ export function AboutSection() {
               </span>
             </div>
           </div>
-          <div className="flex justify-center mb-5">
-            <div
-              className="w-16 h-16 md:w-20 md:h-20 brightness-0 invert drop-shadow-lg"
-              style={{
-                backgroundImage: 'url(https://cdn.poehali.dev/files/1bf0063c-ca22-4cf4-ba3b-ac5c61809a56.jpg)',
-                backgroundSize: '550%',
-                backgroundPosition: '8% 42%',
-                backgroundRepeat: 'no-repeat',
-              }}
-            />
-          </div>
           <h2 className="text-4xl md:text-5xl font-bold mt-3">
             Создатель <span className="text-gradient">StaniStudio</span>
           </h2>
