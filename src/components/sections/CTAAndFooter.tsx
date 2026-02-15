@@ -144,7 +144,7 @@ export function Footer() {
         </div>
         
         <div className="pt-8 border-t border-white/10 text-center text-muted-foreground">
-          <p>© 2024 StaniStudio. Все права защищены. Политика конфиденциальности</p>
+          <p>© 2026 StaniStudio. Все права защищены. Политика конфиденциальности</p>
         </div>
       </div>
     </footer>
