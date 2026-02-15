@@ -1,9 +1,38 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import Icon from "@/components/ui/icon";
+import func2url from "../../../backend/func2url.json";
 
 export function CTASection() {
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [niche, setNiche] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [sent, setSent] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!name.trim() || !phone.trim()) return;
+
+    setLoading(true);
+    try {
+      const res = await fetch(func2url["send-telegram"], {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, phone, niche }),
+      });
+      if (res.ok) {
+        setSent(true);
+      }
+    } catch {
+      // silent
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <section id="contact" className="py-24 px-6 bg-gradient-to-br from-primary/20 via-secondary/20 to-background relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-secondary/10 animate-glow-pulse" />
@@ -19,23 +48,54 @@ export function CTASection() {
         </div>
         
         <Card className="glass-card p-8 max-w-2xl mx-auto">
-          <form className="space-y-6">
-            <div>
-              <label className="block text-sm font-medium mb-2">Имя</label>
-              <Input placeholder="Ваше имя" className="bg-white/5 border-white/10" />
+          {sent ? (
+            <div className="text-center py-8 space-y-4">
+              <div className="w-16 h-16 rounded-full bg-green-500/20 flex items-center justify-center mx-auto">
+                <Icon name="Check" size={32} className="text-green-400" />
+              </div>
+              <h3 className="text-2xl font-bold">Заявка отправлена!</h3>
+              <p className="text-muted-foreground">Мы свяжемся с вами в ближайшее время</p>
             </div>
-            <div>
-              <label className="block text-sm font-medium mb-2">Телефон</label>
-              <Input placeholder="+7 (___) ___-__-__" className="bg-white/5 border-white/10" />
-            </div>
-            <div>
-              <label className="block text-sm font-medium mb-2">Ниша бизнеса</label>
-              <Input placeholder="Юридические услуги, консалтинг и т.д." className="bg-white/5 border-white/10" />
-            </div>
-            <Button className="w-full bg-primary hover:bg-primary/90 text-lg py-6 glow-cyan">
-              Получить консультацию
-            </Button>
-          </form>
+          ) : (
+            <form className="space-y-6" onSubmit={handleSubmit}>
+              <div>
+                <label className="block text-sm font-medium mb-2">Имя</label>
+                <Input
+                  placeholder="Ваше имя"
+                  className="bg-white/5 border-white/10"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  required
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium mb-2">Телефон</label>
+                <Input
+                  placeholder="+7 (___) ___-__-__"
+                  className="bg-white/5 border-white/10"
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
+                  required
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium mb-2">Ниша бизнеса</label>
+                <Input
+                  placeholder="Юридические услуги, консалтинг и т.д."
+                  className="bg-white/5 border-white/10"
+                  value={niche}
+                  onChange={(e) => setNiche(e.target.value)}
+                />
+              </div>
+              <Button
+                type="submit"
+                className="w-full bg-primary hover:bg-primary/90 text-lg py-6 glow-cyan"
+                disabled={loading}
+              >
+                {loading ? "Отправка..." : "Получить консультацию"}
+              </Button>
+            </form>
+          )}
         </Card>
       </div>
     </section>
