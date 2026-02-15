@@ -119,28 +119,25 @@ export function Footer() {
           <div>
             <h4 className="font-bold mb-4">Контакты</h4>
             <div className="space-y-2 text-muted-foreground">
-              <div className="flex items-center gap-2">
+              <a href="mailto:stanislavtsybulskiy03@gmail.com" className="flex items-center gap-2 hover:text-primary transition-colors">
                 <Icon name="Mail" size={18} />
-                <span>info@stanistudio.ru</span>
-              </div>
-              <div className="flex items-center gap-2">
+                <span>stanislavtsybulskiy03@gmail.com</span>
+              </a>
+              <a href="tel:+79147044172" className="flex items-center gap-2 hover:text-primary transition-colors">
                 <Icon name="Phone" size={18} />
-                <span>+7 (999) 123-45-67</span>
-              </div>
+                <span>+7 (914) 704-41-72</span>
+              </a>
             </div>
           </div>
           
           <div>
             <h4 className="font-bold mb-4">Соцсети</h4>
             <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary/20 transition-colors">
+              <a href="https://t.me/stanistudio" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary/20 transition-colors">
                 <Icon name="Send" size={20} />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary/20 transition-colors">
-                <Icon name="Instagram" size={20} />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary/20 transition-colors">
-                <Icon name="Youtube" size={20} />
+              <a href="https://wa.me/+79147044172" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-green-500/20 transition-colors">
+                <Icon name="MessageCircle" size={20} />
               </a>
             </div>
           </div>
