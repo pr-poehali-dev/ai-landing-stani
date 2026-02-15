@@ -100,9 +100,15 @@ export function CasesSection() {
         </Carousel>
 
         <div className="text-center mt-12">
-          <Button size="lg" variant="outline" className="border-primary/30 hover:bg-primary/10">
-            <Icon name="Folder" size={20} className="mr-2" />
-            Смотреть все кейсы
+          <Button
+            size="lg"
+            className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold text-lg px-10 py-6 shadow-lg shadow-primary/25 hover:shadow-primary/40 transition-all duration-300 hover:scale-105"
+            asChild
+          >
+            <a href="https://t.me/stanistudio" target="_blank" rel="noopener noreferrer">
+              <Icon name="Send" size={20} className="mr-2" />
+              БОЛЬШЕ КЕЙСОВ В ТГ-КАНАЛЕ
+            </a>
           </Button>
         </div>
       </div>
