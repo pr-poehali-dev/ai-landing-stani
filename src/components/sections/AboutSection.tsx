@@ -58,7 +58,7 @@ export function AboutSection() {
             <div className="relative">
               <div className="w-[300px] h-[300px] md:w-[380px] md:h-[380px] rounded-2xl overflow-hidden border border-white/10 shadow-2xl shadow-primary/10">
                 <img
-                  src="https://cdn.poehali.dev/files/b13bcffb-cf27-4723-bda2-1fd04ae55dd4.png"
+                  src="https://cdn.poehali.dev/files/e4ff7092-3821-4629-9add-aeec81026d3c.png"
                   alt="Станислав Цыбульский"
                   className="w-full h-full object-cover"
                 />
