@@ -1,7 +1,9 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
+import { Checkbox } from "@/components/ui/checkbox";
 import Icon from "@/components/ui/icon";
 import func2url from "../../../backend/func2url.json";
 
@@ -9,12 +11,13 @@ export function CTASection() {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [niche, setNiche] = useState("");
+  const [agreed, setAgreed] = useState(false);
   const [loading, setLoading] = useState(false);
   const [sent, setSent] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!name.trim() || !phone.trim()) return;
+    if (!name.trim() || !phone.trim() || !agreed) return;
 
     setLoading(true);
     try {
@@ -87,10 +90,24 @@ export function CTASection() {
                   onChange={(e) => setNiche(e.target.value)}
                 />
               </div>
+              <div className="flex items-start gap-3">
+                <Checkbox
+                  id="privacy-agree"
+                  checked={agreed}
+                  onCheckedChange={(checked) => setAgreed(checked === true)}
+                  className="mt-0.5"
+                />
+                <label htmlFor="privacy-agree" className="text-sm text-muted-foreground leading-snug cursor-pointer">
+                  Я даю согласие на обработку{" "}
+                  <Link to="/privacy" className="text-primary hover:underline" target="_blank">
+                    персональных данных
+                  </Link>
+                </label>
+              </div>
               <Button
                 type="submit"
                 className="w-full bg-primary hover:bg-primary/90 text-lg py-6 glow-cyan"
-                disabled={loading}
+                disabled={loading || !agreed}
               >
                 {loading ? "Отправка..." : "Получить консультацию"}
               </Button>
@@ -144,7 +161,7 @@ export function Footer() {
         </div>
         
         <div className="pt-8 border-t border-white/10 text-center text-muted-foreground">
-          <p>© 2026 StaniStudio. Все права защищены. Политика конфиденциальности</p>
+          <p>© 2026 StaniStudio. Все права защищены. <Link to="/privacy" className="hover:text-primary transition-colors underline">Политика конфиденциальности</Link></p>
         </div>
       </div>
     </footer>
