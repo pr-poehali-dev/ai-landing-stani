@@ -94,6 +94,17 @@ export function PricingSection() {
             </Card>
           ))}
         </div>
+
+        <div className="mt-16 text-center">
+          <a
+            href="https://t.me/Stanis_coach"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block px-12 py-5 text-xl font-bold rounded-full bg-gradient-to-r from-primary via-secondary to-primary bg-[length:200%_100%] animate-gradient-x text-white shadow-[0_0_30px_rgba(0,194,255,0.4),0_0_60px_rgba(124,58,237,0.2)] hover:shadow-[0_0_40px_rgba(0,194,255,0.6),0_0_80px_rgba(124,58,237,0.4)] hover:scale-105 transition-all duration-300"
+          >
+            ЗАКАЗАТЬ ПРОЕКТ
+          </a>
+        </div>
       </div>
     </section>
   );
