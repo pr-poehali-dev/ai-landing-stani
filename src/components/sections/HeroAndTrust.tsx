@@ -10,9 +10,9 @@ export function HeroSection() {
       />
       
       <div className="absolute inset-0 animate-pulse-slow">
-        <div className="absolute top-20 left-20 w-64 h-64 bg-cyan-500/10 rounded-full blur-[100px]" />
-        <div className="absolute bottom-32 right-32 w-80 h-80 bg-purple-500/10 rounded-full blur-[120px]" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-cyan-400/5 rounded-full blur-[150px] animate-float" />
+        <div className="absolute top-10 left-10 sm:top-20 sm:left-20 w-32 sm:w-64 h-32 sm:h-64 bg-cyan-500/10 rounded-full blur-[100px]" />
+        <div className="absolute bottom-16 right-16 sm:bottom-32 sm:right-32 w-48 sm:w-80 h-48 sm:h-80 bg-purple-500/10 rounded-full blur-[120px]" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 sm:w-96 h-64 sm:h-96 bg-cyan-400/5 rounded-full blur-[150px] animate-float" />
       </div>
 
       <div className="absolute inset-0 grid-animation opacity-20" />
@@ -74,17 +74,17 @@ export function HeroSection() {
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-5xl mx-auto text-center animate-fade-in">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent leading-tight drop-shadow-2xl animate-text-glow">
+          <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent leading-tight drop-shadow-2xl animate-text-glow">
             ИИ-студия, которая удваивает продажи бизнеса за счет нейросетей
           </h1>
-          <p className="text-xl md:text-2xl text-white/90 mb-12 max-w-3xl mx-auto drop-shadow-lg">
+          <p className="text-base sm:text-xl md:text-2xl text-white/90 mb-8 sm:mb-12 max-w-3xl mx-auto drop-shadow-lg">
             StaniStudio — студия нейросетей полного цикла. От генерации контента до автоматизации продаж и глубокой аналитики.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="text-lg px-8 py-6 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 glow-cyan shadow-2xl transition-all hover:scale-105" onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}>
+            <Button size="lg" className="text-base px-6 py-4 sm:text-lg sm:px-8 sm:py-6 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 glow-cyan shadow-2xl transition-all hover:scale-105" onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}>
               Перечень услуг
             </Button>
-            <Button size="lg" variant="outline" className="text-lg px-8 py-6 border-cyan-400/50 hover:bg-cyan-400/10 backdrop-blur-sm transition-all hover:scale-105" onClick={() => document.getElementById('cases')?.scrollIntoView({ behavior: 'smooth' })}>
+            <Button size="lg" variant="outline" className="text-base px-6 py-4 sm:text-lg sm:px-8 sm:py-6 border-cyan-400/50 hover:bg-cyan-400/10 backdrop-blur-sm transition-all hover:scale-105" onClick={() => document.getElementById('cases')?.scrollIntoView({ behavior: 'smooth' })}>
               Смотреть кейсы
             </Button>
           </div>
@@ -119,7 +119,7 @@ export function TrustBar() {
       <div className="relative flex">
         <div className="flex animate-scroll">
           {[...stats, ...stats].map((item, i) => (
-            <div key={i} className="mx-8 whitespace-nowrap text-lg font-medium text-muted-foreground">
+            <div key={i} className="mx-4 sm:mx-8 whitespace-nowrap text-sm sm:text-lg font-medium text-muted-foreground">
               {item}
             </div>
           ))}

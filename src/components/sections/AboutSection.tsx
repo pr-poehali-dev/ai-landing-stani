@@ -31,13 +31,13 @@ const roles = [
 
 export function AboutSection() {
   return (
-    <section id="about" className="py-24 px-6 relative overflow-hidden">
+    <section id="about" className="py-12 sm:py-24 px-4 sm:px-6 relative overflow-hidden">
       <div className="absolute inset-0 grid-animation opacity-30" />
       <div className="absolute top-10 -right-20 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[100px] animate-pulse-slow" />
       <div className="absolute bottom-10 -left-20 w-[500px] h-[500px] bg-secondary/20 rounded-full blur-[100px] animate-pulse-slow" style={{ animationDelay: "4s" }} />
 
       <div className="container mx-auto max-w-6xl relative z-10">
-        <div className="text-center mb-16">
+        <div className="text-center mb-8 sm:mb-16">
           <div className="inline-block mb-6">
             <div className="glass-card px-6 py-3 rounded-full border border-primary/30">
               <span className="text-primary font-bold tracking-widest uppercase text-base md:text-lg">
@@ -45,7 +45,7 @@ export function AboutSection() {
               </span>
             </div>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold mt-3">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold mt-3">
             Создатель <span className="text-gradient">StaniStudio</span>
           </h2>
         </div>
@@ -99,7 +99,7 @@ export function AboutSection() {
           {stats.map((stat, i) => (
             <div
               key={i}
-              className="glass-card rounded-2xl p-6 text-center group hover:border-primary/30 transition-all duration-500 hover:shadow-lg hover:shadow-primary/5"
+              className="glass-card rounded-2xl p-5 sm:p-8 text-center group hover:border-primary/30 transition-all duration-500 hover:shadow-lg hover:shadow-primary/5"
             >
               <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-500">
                 <Icon
@@ -108,7 +108,7 @@ export function AboutSection() {
                   className="text-primary"
                 />
               </div>
-              <div className="text-2xl md:text-3xl font-bold text-gradient mb-1">
+              <div className="text-xl sm:text-2xl md:text-3xl font-bold text-gradient mb-1">
                 {stat.value}
               </div>
               <div className="text-muted-foreground text-sm">

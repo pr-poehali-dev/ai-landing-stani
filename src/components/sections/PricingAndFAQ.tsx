@@ -32,7 +32,7 @@ export function PricingSection() {
   ];
 
   return (
-    <section id="pricing" className="py-24 px-6 relative overflow-hidden">
+    <section id="pricing" className="py-12 sm:py-24 px-4 sm:px-6 relative overflow-hidden">
       <div className="absolute inset-0 grid-animation opacity-50" />
 
       <div className="absolute top-10 -left-20 w-[500px] h-[500px] bg-primary/25 rounded-full blur-[100px] animate-pulse-slow" />
@@ -51,7 +51,7 @@ export function PricingSection() {
       </svg>
 
       <div className="container mx-auto max-w-6xl relative z-10">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
+        <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-center mb-8 sm:mb-16">
           Тарифы
         </h2>
         
@@ -59,7 +59,7 @@ export function PricingSection() {
           {plans.map((plan, i) => (
             <Card 
               key={i} 
-              className={`glass-card p-8 relative ${plan.popular ? 'glow-cyan scale-105' : ''}`}
+              className={`glass-card p-5 sm:p-8 relative ${plan.popular ? 'glow-cyan scale-105' : ''}`}
             >
               {plan.popular && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-background px-6 py-1 rounded-full text-sm font-bold">
@@ -131,9 +131,9 @@ export function FAQSection() {
   ];
 
   return (
-    <section className="py-24 px-6">
+    <section className="py-12 sm:py-24 px-4 sm:px-6">
       <div className="container mx-auto max-w-4xl">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
+        <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-center mb-8 sm:mb-16">
           Часто задаваемые вопросы
         </h2>
         

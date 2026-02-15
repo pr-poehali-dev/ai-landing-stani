@@ -21,23 +21,23 @@ export function ProblemSection() {
   ];
 
   return (
-    <section className="py-24 px-6">
+    <section className="py-12 sm:py-24 px-4 sm:px-6">
       <div className="container mx-auto max-w-6xl">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
+        <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-center mb-4">
           Бизнес меняется. Либо вы используете AI, либо отстаете.
         </h2>
-        <p className="text-xl text-cyan-400 font-semibold text-center mb-16 max-w-3xl mx-auto">
+        <p className="text-base sm:text-xl text-cyan-400 font-semibold text-center mb-8 sm:mb-16 max-w-3xl mx-auto">
           9 из 10 лидеров рынка в РФ уже используют нейросети и ИИ-решения
         </p>
         
         <div className="grid md:grid-cols-3 gap-8">
           {problems.map((item, i) => (
-            <Card key={i} className="glass-card p-8 hover:glow-cyan transition-all duration-300">
+            <Card key={i} className="glass-card p-5 sm:p-8 hover:glow-cyan transition-all duration-300">
               <div className="mb-6 w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center">
                 <Icon name={item.icon} size={32} className="text-primary" />
               </div>
               <h3 className="text-xl font-bold mb-4">{item.title}</h3>
-              <p className="text-muted-foreground text-lg">{item.solution}</p>
+              <p className="text-muted-foreground text-base sm:text-lg">{item.solution}</p>
             </Card>
           ))}
         </div>
@@ -79,7 +79,7 @@ export function ServicesSection() {
   ];
 
   return (
-    <section id="services" className="py-24 px-6 bg-muted/30 relative overflow-hidden">
+    <section id="services" className="py-12 sm:py-24 px-4 sm:px-6 bg-muted/30 relative overflow-hidden">
       <div 
         className="absolute -inset-10 opacity-25 animate-subtle-zoom"
         style={{
@@ -102,13 +102,13 @@ export function ServicesSection() {
         <line x1="90%" y1="0" x2="60%" y2="100%" stroke="hsl(189 95% 43%)" strokeWidth="0.6" className="animate-line-slide" style={{ animationDelay: '6s' }} />
       </svg>
       <div className="container mx-auto max-w-6xl relative z-10">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
+        <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-center mb-8 sm:mb-16">
           Экосистема услуг
         </h2>
         
         <div className="grid md:grid-cols-3 gap-8">
           {services.map((service, i) => (
-            <Card key={i} className="glass-card p-8 hover:glow-violet transition-all duration-300">
+            <Card key={i} className="glass-card p-5 sm:p-8 hover:glow-violet transition-all duration-300">
               <div className={`mb-6 w-16 h-16 rounded-full bg-${service.color}/20 flex items-center justify-center`}>
                 <Icon name={service.icon} size={32} className={`text-${service.color}`} />
               </div>
@@ -138,7 +138,7 @@ export function ProcessSection() {
   ];
 
   return (
-    <section className="py-24 px-6 relative overflow-hidden">
+    <section className="py-12 sm:py-24 px-4 sm:px-6 relative overflow-hidden">
       <div className="absolute top-1/4 -left-20 w-[400px] h-[400px] bg-primary/15 rounded-full blur-[100px] animate-pulse-slow" />
       <div className="absolute bottom-1/4 -right-20 w-[400px] h-[400px] bg-secondary/15 rounded-full blur-[100px] animate-pulse-slow" style={{ animationDelay: '4s' }} />
 
@@ -176,17 +176,17 @@ export function ProcessSection() {
       </svg>
 
       <div className="container mx-auto max-w-6xl relative z-10">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
+        <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-center mb-4">
           Как мы работаем
         </h2>
-        <p className="text-xl text-muted-foreground text-center mb-16">
+        <p className="text-base sm:text-xl text-muted-foreground text-center mb-8 sm:mb-16">
           Простой и понятный процесс от идеи до результата
         </p>
         
         <div className="grid md:grid-cols-4 gap-6">
           {steps.map((step, i) => (
             <div key={i} className="relative">
-              <Card className="glass-card p-6 text-center h-full hover:scale-105 transition-transform">
+              <Card className="glass-card p-4 sm:p-6 text-center h-full hover:scale-105 transition-transform">
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-xl font-bold">
                   {i + 1}
                 </div>

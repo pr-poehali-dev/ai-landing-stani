@@ -32,14 +32,14 @@ export function CasesSection() {
   ];
 
   return (
-    <section id="cases" className="py-24 px-6 relative overflow-hidden">
+    <section id="cases" className="py-12 sm:py-24 px-4 sm:px-6 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background" />
       
       <div className="container mx-auto max-w-7xl relative z-10">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
+        <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-center mb-4">
           Наши топ-кейсы
         </h2>
-        <p className="text-xl text-muted-foreground text-center mb-16">
+        <p className="text-base sm:text-xl text-muted-foreground text-center mb-8 sm:mb-16">
           Реальные проекты с измеримыми результатами
         </p>
 
@@ -57,7 +57,7 @@ export function CasesSection() {
                       />
                     </div>
                     
-                    <div className="p-8 md:p-12 flex flex-col justify-center">
+                    <div className="p-5 sm:p-8 md:p-12 flex flex-col justify-center">
                       <h3 className="text-2xl md:text-3xl font-bold mb-6 leading-tight">
                         {caseItem.title}
                       </h3>

@@ -4,7 +4,7 @@ import Icon from "@/components/ui/icon";
 const PrivacyPolicy = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <div className="max-w-3xl mx-auto px-6 py-12">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
         <Link
           to="/"
           className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground mb-8 transition-colors"
@@ -13,13 +13,13 @@ const PrivacyPolicy = () => {
           На главную
         </Link>
 
-        <h1 className="text-3xl font-bold mb-8">
+        <h1 className="text-2xl sm:text-3xl font-bold mb-8">
           Политика в отношении обработки персональных данных
         </h1>
 
         <div className="space-y-6 text-muted-foreground leading-relaxed">
           <section>
-            <h2 className="text-xl font-semibold text-foreground mb-3">
+            <h2 className="text-lg sm:text-xl font-semibold text-foreground mb-3">
               1. Общие положения
             </h2>
             <p>
@@ -46,7 +46,7 @@ const PrivacyPolicy = () => {
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold text-foreground mb-3">
+            <h2 className="text-lg sm:text-xl font-semibold text-foreground mb-3">
               2. Какие данные мы собираем
             </h2>
             <p>При использовании сайта мы можем собирать следующие данные:</p>
@@ -61,7 +61,7 @@ const PrivacyPolicy = () => {
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold text-foreground mb-3">
+            <h2 className="text-lg sm:text-xl font-semibold text-foreground mb-3">
               3. Цели обработки персональных данных
             </h2>
             <p>Персональные данные обрабатываются в следующих целях:</p>
@@ -76,7 +76,7 @@ const PrivacyPolicy = () => {
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold text-foreground mb-3">
+            <h2 className="text-lg sm:text-xl font-semibold text-foreground mb-3">
               4. Правовые основания обработки
             </h2>
             <p>Обработка персональных данных осуществляется на основании:</p>
@@ -93,7 +93,7 @@ const PrivacyPolicy = () => {
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold text-foreground mb-3">
+            <h2 className="text-lg sm:text-xl font-semibold text-foreground mb-3">
               5. Порядок обработки персональных данных
             </h2>
             <p>
@@ -115,7 +115,7 @@ const PrivacyPolicy = () => {
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold text-foreground mb-3">
+            <h2 className="text-lg sm:text-xl font-semibold text-foreground mb-3">
               6. Права субъекта персональных данных
             </h2>
             <p>Пользователь имеет право:</p>
@@ -145,7 +145,7 @@ const PrivacyPolicy = () => {
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold text-foreground mb-3">
+            <h2 className="text-lg sm:text-xl font-semibold text-foreground mb-3">
               7. Файлы cookie
             </h2>
             <p>
@@ -157,7 +157,7 @@ const PrivacyPolicy = () => {
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold text-foreground mb-3">
+            <h2 className="text-lg sm:text-xl font-semibold text-foreground mb-3">
               8. Заключительные положения
             </h2>
             <p>
