@@ -40,7 +40,7 @@ export function CTASection() {
       <div className="container mx-auto max-w-4xl relative z-10">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Получите консультацию по вашему запросу!
+            Получите консультацию по вашему запросу
           </h2>
           <p className="text-xl text-muted-foreground">
             И мы сами свяжемся с Вами в ближайшее время!
