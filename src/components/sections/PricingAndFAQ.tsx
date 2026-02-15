@@ -85,8 +85,11 @@ export function PricingSection() {
               <Button 
                 className="w-full" 
                 variant={plan.popular ? "default" : "outline"}
+                asChild
               >
-                Выбрать тариф
+                <a href="https://t.me/Stanis_coach" target="_blank" rel="noopener noreferrer">
+                  Выбрать тариф
+                </a>
               </Button>
             </Card>
           ))}

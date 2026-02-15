@@ -52,9 +52,11 @@ export default function Header() {
           <Button
             size="sm"
             className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700"
-            onClick={() => scrollTo("contact")}
+            asChild
           >
-            Оставить заявку
+            <a href="https://t.me/Stanis_coach" target="_blank" rel="noopener noreferrer">
+              Оставить заявку
+            </a>
           </Button>
         </nav>
 
@@ -82,12 +84,11 @@ export default function Header() {
           ))}
           <Button
             className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700"
-            onClick={() => {
-              scrollTo("contact");
-              setMenuOpen(false);
-            }}
+            asChild
           >
-            Оставить заявку
+            <a href="https://t.me/Stanis_coach" target="_blank" rel="noopener noreferrer">
+              Оставить заявку
+            </a>
           </Button>
         </div>
       )}
