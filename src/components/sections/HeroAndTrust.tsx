@@ -18,7 +18,7 @@ export function HeroSection() {
       <div className="absolute inset-0 grid-animation opacity-20" />
 
       <div className="absolute inset-0 pointer-events-none">
-        {[...Array(30)].map((_, i) => (
+        {[...Array(15)].map((_, i) => (
           <div
             key={i}
             className="particle absolute rounded-full bg-gradient-to-r from-cyan-400 to-purple-400"

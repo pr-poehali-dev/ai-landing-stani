@@ -60,6 +60,8 @@ export function AboutSection() {
                 <img
                   src="https://cdn.poehali.dev/files/e4ff7092-3821-4629-9add-aeec81026d3c.png"
                   alt="Станислав Цыбульский"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover"
                 />
               </div>
