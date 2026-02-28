@@ -1,4 +1,4 @@
-import { onCLS, onFCP, onFID, onLCP, onTTFB, onINP } from 'web-vitals';
+import { onCLS, onFCP, onLCP, onTTFB, onINP } from 'web-vitals';
 
 type Metric = {
   name: string;
@@ -28,7 +28,6 @@ function sendToYandexMetrika(metric: Metric) {
 export function reportWebVitals() {
   onCLS(sendToYandexMetrika);
   onFCP(sendToYandexMetrika);
-  onFID(sendToYandexMetrika);
   onLCP(sendToYandexMetrika);
   onTTFB(sendToYandexMetrika);
   onINP(sendToYandexMetrika);
